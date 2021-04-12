@@ -1,13 +1,13 @@
 export const state = {
-  title: 'Artwork Features',
-  description: 'custom description',
+  title: 'Artifact Features',
+  description: 'Describes the possibilities when creating artifacts for the Artificial Museum',
 }
 
 export const View = state => [
-  h1('Artwork Features'),
+  h1('Artifact Features'),
 
   h2('Metadata:'),
-  p('This information is displayed in the List of Artworks and the map popups.'),
+  p('This information is displayed in the List of Artifacts and the map popups.'),
   p('Some of the data below is not yet being displayed, this is just a matter of time.'),
 
   ul([
@@ -42,7 +42,7 @@ export const View = state => [
   p(['Maximum Package Size: ', b('10 megabytes'), '.']),
   p('This includes the gltf file and any video / audio files that should be played.'),
 
-  h3('Artwork 3D File:'),
+  h3('GLTF 3D File:'),
   p('.gltf and .glb files are supported. Textures should be packed into the gltf file.'),
 
   h3('Preview image'),
@@ -82,7 +82,7 @@ export const View = state => [
   ]),
 
   h3('Clipping'),
-  p('If you want to clip parts of the scene, you can add a clipping mesh to your artwork.'),
+  p('If you want to clip parts of the scene, you can add a clipping mesh to your artifact.'),
   p('Just add any mesh(es) and make sure their name includes the word "clip".'),
   p(
     'This needs to be used sensibly, visitors can move INTO clipping objects, turning the clipping off.',

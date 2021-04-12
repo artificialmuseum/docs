@@ -1,9 +1,4 @@
-export const state = {
-  title: 'h1 indexpage',
-  description: 'custom description',
-}
-
-export const View = state => [
+export const View = () => [
   h1('Welcome to the Artificial Museum Documentation.'),
 
   p([

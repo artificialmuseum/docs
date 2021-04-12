@@ -1,7 +1,7 @@
 export const state = {
   app: {
-    title: 'Custom App Title',
-    description: 'Custom App Description',
+    title: 'Artificial Museum Documentation',
+    description: 'This page documents the features of the artificialmuseum.com',
   },
 
   menu: [
