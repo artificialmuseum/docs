@@ -1,0 +1,3 @@
+user-agent: *
+allow: /
+sitemap: https:/https:/docs.artificialmuseum.com/sitemap.xml
