@@ -53,7 +53,8 @@ export const View = state => [
   p('Should be edited to remove the photographer from the image.'),
 
   h3('Video'),
-  p('Optional. ONE object in the scene has to be named "videotarget" for this to work'),
+  p('Optional.'),
+  p('ONE object in the scene has to be named "videotarget" for this to work'),
 
   h3('Audio'),
   p('Optional.'),
@@ -141,5 +142,28 @@ export const View = state => [
       text: 'Doppeldenk',
       to: 'https://artificialmuseum.com/#z=17&lat=48.212&lng=16.376&p=doppeldenk',
     }),
+  ]),
+
+  h2('Caveats'),
+
+  h3('Audio/Video and Gltf synchronisation'),
+  p('It is not possible to force the audio, video and gltf animations to play at the same time.'),
+  p([
+    'Videos and Audio files buffer their data and might just stop playing',
+    ' if the bandwidth of the visitor is too low,',
+    ' even if we synchronized the start of the video/audio and the animations, buffering might break that sync later..'
+  ]),
+
+  h3('Clipping'),
+  p([
+    'Visitors can walk anywhere in the scene, including the ',
+    b('INSIDE'),
+    ' of the clipping object, breaking the clipping in weird ways.',
+  ]),
+  p([
+    'To avoid this problem,',
+    ' clipping objects should only be placed where visitors are unlikely to go to',
+    ' (below the ground, very far from the artifact, or high in the sky (2+ meters))',
+    ' alternatively, the clipping object should be as small as possible.'
   ]),
 ]
