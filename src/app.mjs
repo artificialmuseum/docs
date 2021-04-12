@@ -6,6 +6,6 @@ export const state = {
 
   menu: [
     { to: '/', text: 'Index' },
-    { to: '/artwork-features/', text: 'Artwork Features' },
+    { to: '/artifact-features/', text: 'Artifact Features' },
   ],
 }
