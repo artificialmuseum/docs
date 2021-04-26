@@ -44,7 +44,7 @@ export const View = state => [
   h2('Assets:'),
 
   p(['Maximum Package Size: ', b('10 megabytes'), '.']),
-  p(['This includes the gltf file', b('and'), 'any video / audio files that should be played.']),
+  p(['This includes the gltf file ', b('and'), ' any video / audio files that should be played.']),
 
   h3('GLTF 3D File:'),
   p([
@@ -55,6 +55,9 @@ export const View = state => [
     " It's allowed to use non-quadratic images too (example; 1024x512)",
     ' For optimization of images tools like optipng and sharp offer command line interfaces to quickly convert multiple images.',
   ]),
+
+  h3('GLTF object position'),
+  p('The 3d object in the gltf should be positioned on X: 0 and Y: 0, the Z position determines how high the objects floats above the floor.'),
 
   h3('Preview image'),
   p(Required()),
