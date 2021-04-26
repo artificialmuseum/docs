@@ -28,7 +28,7 @@ export const View = state => [
   h2('Artist:'),
   ul([
     li(['Name (max 30 characters)', Required()]),
-    li(['Url (Homepage or Social Network Profile)', Required()]),
+    li(['Url (Homepage or Social Network Profile)', Optional()]),
     li(['Bio (max 300 characters)', Required()]),
   ]),
 
@@ -37,7 +37,7 @@ export const View = state => [
 
   ul([
     li(['Name', Required()]),
-    li(['Url (Homepage or Social Network Profile)', Required()]),
+    li(['Url (Homepage or Social Network Profile)', Optional()]),
     li(['Bio (max 300 characters)', Required()]),
   ]),
 
@@ -57,7 +57,11 @@ export const View = state => [
   ]),
 
   h3('GLTF object position'),
-  p('The 3d object in the gltf should be positioned on X: 0 and Y: 0, the Z position determines how high the objects floats above the floor.'),
+  p([
+    'The 3D object in the gltf should be positioned on X: 0 and Y: 0,',
+    ' the Z position determines how high the objects floats above the floor.',
+    ' The Blender units translate 1:1 to meters.',
+  ]),
 
   h3(['Preview image', Required()]),
   p('width: 800px, height: 600px'),
@@ -65,9 +69,12 @@ export const View = state => [
   h3(['Skybox image', Required()]),
   p('360 degree image of the location the artifact is positioned at.'),
   p('Should be edited to remove the photographer from the image.'),
+  p('Alternatively, the skybox image can also be related to the artwork and not to the location.'),
 
   h3(['Video', Optional()]),
   p('ONE object in the scene has to be named "videotarget" for this to work'),
+  p('Depending on the object, there can theoretically also be multiple videotargets.'),
+  p('Caveat: The polycount of the videotarget should be as low as possible, ~20-50 faces work nicely.'),
 
   h3(['Audio', Optional()]),
   p([
@@ -214,5 +221,21 @@ export const View = state => [
     'This will allow plants to grow on walls,',
     ' physics that are restricted by the real world,',
     ' and lots of other ways to incorporate real world data into artifacts.',
+  ]),
+
+  h2('Compatible Browsers'),
+
+  h3('IOS'),
+  p([
+    'Mozilla has built a special Version of Firefox for Augmented Reality: ',
+    Link({ to: 'https://apps.apple.com/us/app/webxr-viewer/id1295998056', text: 'Webxr Viewer' }),
+  ]),
+
+  h3('Android'),
+  p([
+    'On Android, Chromium, Brave and other Chromium based browsers support Webxr.',
+    ' In addition, ',
+    Link({ to: 'https://play.google.com/store/apps/details?id=com.google.ar.core&hl=en_US&gl=US', text: 'Google Play Services for AR' }),
+    ' have to be installed.',
   ]),
 ]
