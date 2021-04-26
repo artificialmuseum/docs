@@ -12,15 +12,15 @@ export const View = state => [
 
   ul([
     li(['Name', Required()]),
-    li(['Abstract (max 100 Characters)', Required()]),
+    li(['Abstract (max 100 characters)', Required()]),
     li(['Description (max 500 characters)', Required()]),
     li(['Position (Latitude & Longitude)', Required()]),
   ]),
 
   h2('Artifact Location'),
   ul([
-    li(['Name (max 30 Characters)', Required()]),
-    li(['Abstract (max 100 Characters)', Required()]),
+    li(['Name (max 30 characters)', Required()]),
+    li(['Abstract (max 100 characters)', Required()]),
     li(['Description (max 500 characters)', Required()]),
     li(['Position (Latitude & Longitude)', Required()]),
   ]),
@@ -33,10 +33,10 @@ export const View = state => [
   ]),
 
   h2('3D Artist:'),
-  p('if different to Artist'),
+  p('if different to Artist.'),
 
   ul([
-    li(['Name', Required()]),
+    li(['Name (max 30 characters)', Required()]),
     li(['Url (Homepage or Social Network Profile)', Optional()]),
     li(['Bio (max 300 characters)', Required()]),
   ]),
