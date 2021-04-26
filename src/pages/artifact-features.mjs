@@ -59,21 +59,17 @@ export const View = state => [
   h3('GLTF object position'),
   p('The 3d object in the gltf should be positioned on X: 0 and Y: 0, the Z position determines how high the objects floats above the floor.'),
 
-  h3('Preview image'),
-  p(Required()),
+  h3(['Preview image', Required()]),
   p('width: 800px, height: 600px'),
 
-  h3('Skybox image'),
-  p(Required()),
+  h3(['Skybox image', Required()]),
   p('360 degree image of the location the artifact is positioned at.'),
   p('Should be edited to remove the photographer from the image.'),
 
-  h3('Video'),
-  p(Optional()),
+  h3(['Video', Optional()]),
   p('ONE object in the scene has to be named "videotarget" for this to work'),
 
-  h3('Audio'),
-  p(Optional()),
+  h3(['Audio', Optional()]),
   p([
     'Unfortunately, directional audio is broken in chromium on android,',
     ' so this audio file will just play in stereo.',
@@ -102,6 +98,7 @@ export const View = state => [
   ]),
 
   h3('Clipping'),
+
   p('If you want to clip parts of the scene, you can add a clipping mesh to your artifact.'),
   p('Just add any mesh(es) and make sure their name includes the word "clip".'),
   p([
