@@ -11,63 +11,79 @@ export const View = state => [
   p('Some of the data below is not yet being displayed, this is just a matter of time.'),
 
   ul([
-    li('Name'),
-    li('Abstract (max 100 Characters)'),
-    li('Description (max 500 characters)'),
-    li('Position (Latitude & Longitude)'),
+    li(['Name', Required()]),
+    li(['Abstract (max 100 Characters)', Required()]),
+    li(['Description (max 500 characters)', Required()]),
+    li(['Position (Latitude & Longitude)', Required()]),
   ]),
 
   h2('Artifact Location'),
   ul([
-    li('Name (max 30 Characters)'),
-    li('Abstract (max 100 Characters)'),
-    li('Description (max 500 characters)'),
-    li('Position (Latitude & Longitude)'),
+    li(['Name (max 30 Characters)', Required()]),
+    li(['Abstract (max 100 Characters)', Required()]),
+    li(['Description (max 500 characters)', Required()]),
+    li(['Position (Latitude & Longitude)', Required()]),
   ]),
 
   h2('Artist:'),
   ul([
-    li('Name (max 30 characters)'),
-    li('Url (Homepage or Social Network Profile)'),
-    li('Bio (max 300 characters)'),
+    li(['Name (max 30 characters)', Required()]),
+    li(['Url (Homepage or Social Network Profile)', Required()]),
+    li(['Bio (max 300 characters)', Required()]),
   ]),
 
   h2('3D Artist:'),
   p('if different to Artist'),
 
-  ul([li('Name'), li('Url (Homepage or Social Network Profile)'), li('Bio (max 300 characters)')]),
+  ul([
+    li(['Name', Required()]),
+    li(['Url (Homepage or Social Network Profile)', Required()]),
+    li(['Bio (max 300 characters)', Required()]),
+  ]),
 
   h2('Assets:'),
 
   p(['Maximum Package Size: ', b('10 megabytes'), '.']),
-  p('This includes the gltf file and any video / audio files that should be played.'),
+  p(['This includes the gltf file', b('and'), 'any video / audio files that should be played.']),
 
   h3('GLTF 3D File:'),
-  p('.gltf and .glb files are supported. Textures should be packed into the gltf file.'),
+  p([
+    '.gltf and .glb files are supported. Textures should be optimized and packed into the gltf file.',
+    ' For optimal gpu performance, make sure that the image sizes are powers of two (128, 256, 512, 1024, 2048).',
+    ' Textures bigger than 2048x2048 pixels can usually be resized to 1024x1024 without losing visible quality.',
+    ' (re)baking the textures also usually makes them smaller because the bake algorithm tries to find the smallest image it can fit the texture parts into.',
+    " It's allowed to use non-quadratic images too (example; 1024x512)",
+    ' For optimization of images tools like optipng and sharp offer command line interfaces to quickly convert multiple images.',
+  ]),
 
   h3('Preview image'),
+  p(Required()),
   p('width: 800px, height: 600px'),
 
   h3('Skybox image'),
+  p(Required()),
   p('360 degree image of the location the artifact is positioned at.'),
   p('Should be edited to remove the photographer from the image.'),
 
   h3('Video'),
-  p('Optional.'),
+  p(Optional()),
   p('ONE object in the scene has to be named "videotarget" for this to work'),
 
   h3('Audio'),
-  p('Optional.'),
-  p(
-    'Unfortunately, directional audio is broken in chrome on android, so this audio file will just play in stereo.',
-  ),
+  p(Optional()),
+  p([
+    'Unfortunately, directional audio is broken in chromium on android,',
+    ' so this audio file will just play in stereo.',
+    ' The chrome bug that tracks progress on this is a few years old by now',
+    ' and unlikely to be fixed until the android audio drivers are rewritten from scratch.',
+  ]),
 
   h3('Testing:'),
-
   p([
     'Don Mc Curdy’s ',
     Link({ text: 'GLTF Viewer', to: 'https://gltf-viewer.donmccurdy.com/' }),
     ' is a fast and simple way to test your gltf files.',
+    ' Having a working gltf file in the gltf viewer means that it should also be usable in the Artificial Museum.',
   ]),
 
   h2('Additional Features:'),
@@ -85,9 +101,11 @@ export const View = state => [
   h3('Clipping'),
   p('If you want to clip parts of the scene, you can add a clipping mesh to your artifact.'),
   p('Just add any mesh(es) and make sure their name includes the word "clip".'),
-  p(
-    'This needs to be used sensibly, visitors can move INTO clipping objects, turning the clipping off.',
-  ),
+  p([
+    'This needs to be used sensibly,',
+    ' visitors can move INTO clipping objects,',
+    ' turning the clipping off.',
+  ]),
 
   p([
     'Example: ',
@@ -146,12 +164,27 @@ export const View = state => [
 
   h2('Caveats'),
 
+  h3('GPS accuracy'),
+  p('The Geo Positioning System is quite inaccurate.'),
+  p([
+    'This inaccuracy stems from obstruction of the signal,',
+    ' for example buildings, trees and even cloudy skies can have a negative impact.',
+  ]),
+  p([
+    'This leads to an average accuracy of 10-20 meters,',
+    ' and currently our artworks are spawnable in a 50 meter radius around their latitude and longitude.',
+  ]),
+  p([
+    'Phone vendors are working on multiplexing gps hardware,',
+    ' which would then use more than one satellite to improve the positioning using triangulation.',
+  ]),
+
   h3('Audio/Video and Gltf synchronisation'),
   p('It is not possible to force the audio, video and gltf animations to play at the same time.'),
   p([
     'Videos and Audio files buffer their data and might just stop playing',
     ' if the bandwidth of the visitor is too low,',
-    ' even if we synchronized the start of the video/audio and the animations, buffering might break that sync later..'
+    ' even if we synchronized the start of the video/audio and the animations, buffering might break that sync later..',
   ]),
 
   h3('Clipping'),
@@ -164,6 +197,22 @@ export const View = state => [
     'To avoid this problem,',
     ' clipping objects should only be placed where visitors are unlikely to go to',
     ' (below the ground, very far from the artifact, or high in the sky (2+ meters))',
-    ' alternatively, the clipping object should be as small as possible.'
+    ' alternatively, the clipping object should be as small as possible.',
+  ]),
+
+  h3('Interacting with the real world'),
+  p([
+    'We only support one method of interaction at the moment:',
+    ' The visitor points their device to the ground and we find the floor level using sensors.',
+  ]),
+  p([
+    'Once the depth api lands in browsers,',
+    ' which is expected sometime during 2021,',
+    ' we will work on adding the real world as input.',
+  ]),
+  p([
+    'This will allow plants to grow on walls,',
+    ' physics that are restricted by the real world,',
+    ' and lots of other ways to incorporate real world data into artifacts.',
   ]),
 ]
