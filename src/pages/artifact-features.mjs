@@ -10,14 +10,7 @@ export const View = state => [
   p('This information is displayed in the List of Artifacts and the map popups.'),
   p('Some of the data below is not yet being displayed, this is just a matter of time.'),
 
-  ul([
-    li(['Name (max 30 characters)', Required()]),
-    li(['Abstract (max 100 characters)', Required()]),
-    li(['Description (max 500 characters)', Required()]),
-    li(['Position (Latitude & Longitude)', Required()]),
-  ]),
-
-  h2('Artifact Location'),
+  h2('Artifact Data'),
   ul([
     li(['Name (max 30 characters)', Required()]),
     li(['Abstract (max 100 characters)', Required()]),
