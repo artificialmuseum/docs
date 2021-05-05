@@ -97,7 +97,7 @@ export const View = state => [
   p('Alternatively, the skybox image can also be related to the artifact and not to the location.'),
 
   h3(['Video', Optional()]),
-  p('ONE object in the scene has to be named "videotarget" for this to work'),
+  p('At least one object in the scene has to be named "videotarget" for this to work.'),
   p('Depending on the object, there can theoretically also be multiple videotargets.'),
   p('Caveat: The polycount of the videotarget should be as low as possible, ~20-50 faces work nicely.'),
 
