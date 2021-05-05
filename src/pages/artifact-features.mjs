@@ -12,30 +12,44 @@ export const View = state => [
 
   h2('Artifact Data'),
   ul([
-    li(['Name (max 30 characters)', Required()]),
+    li(['Name (max 25 characters)', Required()]),
     li(['Abstract (max 100 characters)', Required()]),
-    li(['Description (max 500 characters)', Required()]),
+    li(['Description (max 300 characters)', Required()]),
     li(['Position (Latitude & Longitude)', Required()]),
   ]),
 
-  h2('Artist:'),
+  h2('Artist(s):'),
   ul([
-    li(['Name (max 30 characters)', Required()]),
+    li(['Name (max 25 characters)', Required()]),
     li(['Url (Homepage or Social Network Profile)', Optional()]),
     li(['Bio (max 300 characters)', Required()]),
   ]),
 
-  h2('3D Artist:'),
-  p('if different to Artist.'),
-
+  h2('3D Artist(s):'),
+  p('if different to Artists.'),
   ul([
-    li(['Name (max 30 characters)', Required()]),
+    li(['Name (max 25 characters)', Required()]),
+    li(['Url (Homepage or Social Network Profile)', Optional()]),
+    li(['Bio (max 300 characters)', Required()]),
+  ]),
+
+  h2('Photographer'),
+  p('If the preview image has been shot by someone else then the artists.'),
+  ul([
+    li(['Name (max 25 characters)', Required()]),
+    li(['Url (Homepage or Social Network Profile)', Optional()]),
+    li(['Bio (max 300 characters)', Required()]),
+  ]),
+
+  h2('Sound artist'),
+  p('If the sound has been created by someone else then the artists.'),
+  ul([
+    li(['Name (max 25 characters)', Required()]),
     li(['Url (Homepage or Social Network Profile)', Optional()]),
     li(['Bio (max 300 characters)', Required()]),
   ]),
 
   h2('Assets:'),
-
   p(['Maximum Package Size: ', b('10 megabytes'), '.']),
   p(['This includes the gltf file ', b('and'), ' any video / audio files that should be played.']),
 
@@ -46,7 +60,11 @@ export const View = state => [
     ' Textures bigger than 2048x2048 pixels can usually be resized to 1024x1024 without losing visible quality.',
     ' (re)baking the textures also usually makes them smaller because the bake algorithm tries to find the smallest image it can fit the texture parts into.',
     " It's allowed to use non-quadratic images too (example; 1024x512)",
-    ' For optimization of images tools like optipng and sharp offer command line interfaces to quickly convert multiple images.',
+    ' For optimization of images tools like ',
+    Link({ to: 'http://optipng.sourceforge.net/', text: 'optipng' }),
+    ' and ',
+    Link({ to: 'https://www.npmjs.com/package/sharp', text: 'sharp' }),
+    ' offer command line interfaces to quickly convert multiple images.',
   ]),
 
   h3('GLTF object position'),
@@ -56,13 +74,27 @@ export const View = state => [
     ' The Blender units translate 1:1 to meters.',
   ]),
 
+  h3('Scenes'),
+  p('Please delete all non-used scenes from the blend project before exporting the gltf file, empty scenes will cause an error.'),
+
+  h3('Apply'),
+  p('Please apply the transform, scale, rotation and modifier data of the object (in blender the apply menu can be shown using ctrl+a.'),
+
+  h3('Photogrammetry'),
+  p([
+    'If your artifact is based on a 3d scan, ',
+    Link({ to: 'https://github.com/wjakob/instant-meshes', text: 'instant meshes' }),
+    ' can be used to cleanup and minify the mesh before using it.',
+    ' Unfortunately the uv map of the texture is lost in the process, it usually is quite easy to reapply after instant meshes has been applied',
+  ]),
+
   h3(['Preview image', Required()]),
   p('width: 800px, height: 600px'),
 
   h3(['Skybox image', Required()]),
   p('360 degree image of the location the artifact is positioned at.'),
   p('Should be edited to remove the photographer from the image.'),
-  p('Alternatively, the skybox image can also be related to the artwork and not to the location.'),
+  p('Alternatively, the skybox image can also be related to the artifact and not to the location.'),
 
   h3(['Video', Optional()]),
   p('ONE object in the scene has to be named "videotarget" for this to work'),
@@ -117,6 +149,13 @@ export const View = state => [
 
   h3('Videotarget'),
 
+  p('Max Resolution: 1280x720p'),
+  p('Framerate: 25'),
+  p('Video Bitrate: ~2mbit/s'),
+  p('Audio: 40100'),
+  p('FFmpeg command:'),
+  p('ffmpeg -i video_in.mp4 -b:v 1024k -b:a 128k video_out.mp4'),
+
   p([
     'Any mesh can be a videotarget, just name it "videotarget" and the video will play on the object,',
     ' using the same texture mapping as that object uses before the video gets applied.',
@@ -138,7 +177,7 @@ export const View = state => [
   p('All animations in the gltf file will play simultaneously.'),
   p('Only a few properties are animatable:'),
 
-  ul([li('Keyframe(translation, rotation, scale)'), li('Shape keys'), li('Armatures / skinning')]),
+  ul([li('Keyframe (translation, rotation, scale)'), li('Shape keys'), li('Armatures / skinning')]),
 
   p([
     'Example: ',
@@ -172,7 +211,7 @@ export const View = state => [
   ]),
   p([
     'This leads to an average accuracy of 10-20 meters,',
-    ' and currently our artworks are spawnable in a 50 meter radius around their latitude and longitude.',
+    ' and currently our artifacts are spawnable in a 50 meter radius around their latitude and longitude.',
   ]),
   p([
     'Phone vendors are working on multiplexing gps hardware,',
