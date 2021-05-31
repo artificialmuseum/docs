@@ -150,9 +150,10 @@ export const View = state => [
   h3('Videotarget'),
 
   p('Max Resolution: 1280x720p'),
-  p('Framerate: 25'),
-  p('Video Bitrate: ~2mbit/s'),
-  p('Audio: 40100'),
+  p('Optimal Resolution: 1024x512p, 512x1024p'),
+  p('Framerate: 25 - 30'),
+  p('Maximum Video Bitrate: ~2MBit/s'),
+  p('Audio sample rate: 44100, 48000'),
   p('FFmpeg command:'),
   p('ffmpeg -i video_in.mp4 -b:v 1024k -b:a 128k video_out.mp4'),
 
