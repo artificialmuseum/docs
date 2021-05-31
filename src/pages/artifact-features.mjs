@@ -78,7 +78,7 @@ export const View = state => [
   p('Please delete all non-used scenes from the blend project before exporting the gltf file, empty scenes will cause an error.'),
 
   h3('Apply'),
-  p('Please apply the transform, scale, rotation and modifier data of the object (in blender the apply menu can be shown using ctrl+a.'),
+  p('Please apply the transform, scale, rotation and modifier data of the object (in blender the apply menu can be shown using ctrl+a)'),
 
   h3('Photogrammetry'),
   p([
