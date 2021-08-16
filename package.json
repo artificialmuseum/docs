@@ -2,6 +2,7 @@
   "name": "docs.artificialmuseum.com",
   "version": "0.0.1-alpha",
   "private": true,
+  "type": "module",
   "scripts": {
     "start": "t -p",
     "format": "f -w --exclude docs",
