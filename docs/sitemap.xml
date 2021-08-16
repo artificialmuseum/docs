@@ -7,21 +7,49 @@
 
 <url>
   <loc>https:/https:/docs.artificialmuseum.com/</loc>
-  <lastmod>2021-05-31</lastmod>
+  <lastmod>2021-08-16</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.5</priority>
 </url>
 
 <url>
   <loc>https:/https:/docs.artificialmuseum.com/404/</loc>
-  <lastmod>2021-05-31</lastmod>
+  <lastmod>2021-08-16</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.5</priority>
 </url>
 
 <url>
-  <loc>https:/https:/docs.artificialmuseum.com/artifact-features/</loc>
-  <lastmod>2021-05-31</lastmod>
+  <loc>https:/https:/docs.artificialmuseum.com/browsers/</loc>
+  <lastmod>2021-08-16</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.5</priority>
+</url>
+
+<url>
+  <loc>https:/https:/docs.artificialmuseum.com/gltf/</loc>
+  <lastmod>2021-08-16</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.5</priority>
+</url>
+
+<url>
+  <loc>https:/https:/docs.artificialmuseum.com/metadata/</loc>
+  <lastmod>2021-08-16</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.5</priority>
+</url>
+
+<url>
+  <loc>https:/https:/docs.artificialmuseum.com/realworld/</loc>
+  <lastmod>2021-08-16</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.5</priority>
+</url>
+
+<url>
+  <loc>https:/https:/docs.artificialmuseum.com/testing/</loc>
+  <lastmod>2021-08-16</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.5</priority>
 </url>

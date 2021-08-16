@@ -1,9 +1,13 @@
 {
-  "/magic.css": "sha384-bCiN4XcAY8FEsL8ySD5TwjXg6gxp6R56QhQkL82E/jPgZ5q4mLNSXVs75pR+hi1u",
-  "/magic.js": "sha384-vV9H5i/I++2wicNG2LaheyH2QaPkH/UWIKaZOUKeSecQ7cBkWi5hHuRZ1XGcp4Dt",
-  "/": "sha384-ACoEpokux2a4Jnev91l5/6opjfIL8/EVGSSpbsIhU7ekESIi/RKO3rRndTA0CSQu",
-  "/404/": "sha384-BdEea5avD50ya7QjclBnc95R4sQ9scL0PK7gAlDh9psUlqd7nkx6zJEIVIHr/bb7",
-  "/artifact-features/": "sha384-W+DTAZzItP1ASGfYaLAiHjvEgnGajgLxqsu+5htQbmD0fQ0d2VzRWjrMwG0Yu5Zt",
+  "/magic.css": "sha384-bdslKK6Blrp+iGO4h3Xz8b2AsNlyqGdtm/A8i9+zPJD72+tV/BQGUREex2++uLFc",
+  "/magic.js": "sha384-PIzD3H9qlvzpIlJ8Ck6qLudg5DEEOQQ4f74eMnuGBBgAt5sco3QvFtrZ5bnAgcNw",
+  "/": "sha384-DTQxK3eIVL7ZHoKOiH3/sZB74lOmLoV0hG80QFfluW1jpEZWxSoC8DW70ywnqUe+",
+  "/404/": "sha384-6vNiwsFUzECXd1INYYD99RAvRbK0XLkOcyJr0QzAp786dobtlfoAb0dg7SC7/A2s",
+  "/browsers/": "sha384-jlMtyOTXrPOee6MW+aK49dTVGUZTtSL5RnIVObi0Vp+XIfslk2nD9/36LCJlMl9r",
+  "/gltf/": "sha384-Dlbf9bR7z8pWKTm5qEoQkK83dMaXIRMtdvekUG8qC8SeArdIcsDnIa27gGbBUBUL",
+  "/metadata/": "sha384-OIxnrST9hqqF5CbDVv8LNSd0kNLOIdiefLZh8cBj2qS+4z3NebOwz51Z/WUp3PIA",
+  "/realworld/": "sha384-F8JyB0H2BAepHxZvizkDns5p3t2L0sWFfFVB70IBt8m4YuHNnZFlmXnoH+/fYK82",
+  "/testing/": "sha384-zv+WxXfpK+f2KMgP3+hjUv2gsfqXhFcPscSVfMrL67BQr4leG5sijOvEDRvy/pFD",
   "/robots.txt": "sha384-f7MLQ3NA6hux21W8JTGacYynF161JqTjTvMu5Bv1/0BbvwV8cb71Nd4JZ2XvWvqT",
-  "/sitemap.xml": "sha384-jcJWvyDCUBLD9MMJLEunT+4dqlbY/ZCI7ifadkzS80EWM2t7Wqrb+P4wheYoDgAL"
+  "/sitemap.xml": "sha384-84s1Y03QSBtllF/dgRPuoo+cPthTzzJkGmLNWxd6CZ8WzvdI0F25Q4AM/H+rNXaj"
 }
