@@ -4,6 +4,10 @@ export const state = {
 
   menu: [
     { to: '/', text: 'Index' },
-    { to: '/artifact-features/', text: 'Artifact Features' },
+    { to: '/gltf/', text: 'Gltf files' },
+    { to: '/metadata/', text: 'Artifact metadata' },
+    { to: '/browsers/', text: 'Supported Browsers' },
+    // { to: '/realworld/', text: 'Real world interaction' },
+    { to: '/testing/', text: 'Preview' },
   ],
 }
