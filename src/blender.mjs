@@ -3,6 +3,7 @@ export const View = () => [
     header([
       h1({ class: 'page-title' }, ['Blender 3D Workshop 2022', span({ class: 'icon' }, '🧠')]),
     ]),
+
     div({ class: 'page-body' }, [
       ul(li([span('little motivational video by Hendy August:')])),
       VideoEmbed('xBr7uW7uC1Y'),
@@ -552,21 +553,21 @@ export const View = () => [
       ),
       p(b('with app on iOS')),
       ul(
-        li({ style: 'list-style-type:disc' }, [
+        li([
           b('Scaniverse '),
           '(my favorite tool, good for room scans, sculptures and bigger objects)',
           p(['Download: ', Link({ to: 'https://scaniverse.com/' }, 'https://scaniverse.com/')]),
         ]),
       ),
       ul(
-        li({ style: 'list-style-type:disc' }, [
+        li([
           b('Trnio '),
           '(good for smaller objects, like coffee cups, faces!!!)',
           p(['Download: ', Link({ to: 'https://www.trnio.com/' }, 'https://www.trnio.com/')]),
         ]),
       ),
       ul(
-        li({ style: 'list-style-type:disc' }, [
+        li([
           b('Canvas'),
           ' (just found that one, specifically for room scans)',
           p(['Download: ', Link({ to: 'https://canvas.io/' }, 'https://canvas.io/')]),
@@ -574,7 +575,7 @@ export const View = () => [
       ),
       p(b('on PC with video input or image input')),
       ul(
-        li({ style: 'list-style-type:disc' }, [
+        li([
           b('Meshroom '),
           '(open source, tried and failed, but maybe you find out :))',
           p([
@@ -645,7 +646,7 @@ export const View = () => [
         ]),
       ),
       ul(
-        li({ style: 'list-style-type:disc' }, [
+        li([
           b('Reality Capture'),
           ' (using program is for free, each download of the mesh costs around 20$)',
           p([
@@ -689,7 +690,7 @@ export const View = () => [
         ]),
       ),
       ul(
-        li({ style: 'list-style-type:disc' }, [
+        li([
           b('Zephyr Software'),
           ' (not for free,...just 50 images :( )',
           p([
@@ -1226,7 +1227,7 @@ export const View = () => [
         'Helpful tools: ',
       ),
       ul(
-        li({ style: 'list-style-type:disc' }, [
+        li([
           b('MIXAMO'),
           figure(
             Link(
@@ -1311,7 +1312,7 @@ export const View = () => [
         ]),
       ),
       ul(
-        li({ style: 'list-style-type:disc' }, [
+        li([
           'DeepMotion Portal',
           div([
             figure(
@@ -1389,7 +1390,7 @@ export const View = () => [
         'Character Animation with Rigify - pretty complicated',
       ),
       ul(
-        li({ style: 'list-style-type:disc' }, [
+        li([
           mark({ class: 'highlight-teal_background' }, 'Rigify '),
           '(explains awesome rigging)',
         ]),
@@ -1463,7 +1464,7 @@ export const View = () => [
           ],
         ),
       ),
-      ul(li({ style: 'list-style-type:disc' }, 'RIG (simple character)')),
+      ul(li('RIG (simple character)')),
       figure(
         Link(
           {

@@ -9,7 +9,7 @@ export const state = {
     { to: '/browsers/', text: 'Supported Browsers' },
     // { to: '/realworld/', text: 'Real world interaction' },
     // { to: '/sandbox/', text: 'Sandbox' },
-    { to: '/blender/', text: 'Blender Tutorials' },
+    // { to: '/blender/', text: 'Blender Tutorials' },
     { to: '/testing/', text: 'Preview' },
   ],
 }
