@@ -15,7 +15,7 @@ export const View = () => [
     ' (re)baking the textures also usually makes them smaller because the bake algorithm tries to find the smallest image it can fit the texture parts into.',
     " It's allowed to use non-quadratic images too (example; 1024x512)",
     ' For optimization of images tools like ',
-    Link({ to: 'http://optipng.sourceforge.net/', text: 'optipng' }),
+    Link({ to: 'https://optipng.sourceforge.net/', text: 'optipng' }),
     ' and ',
     Link({ to: 'https://www.npmjs.com/package/sharp', text: 'sharp' }),
     ' offer command line interfaces to quickly convert multiple images.',
@@ -48,7 +48,7 @@ export const View = () => [
     'Example: ',
     Link({
       text: 'Fake Mirror',
-      to: 'https://artificialmuseum.com/#z=17&lat=48.2034&lng=16.37&p=fakemirror',
+      to: 'https://artificialmuseum.com/vienna/#z=17&lat=48.2131&lng=16.3358&d=fakemirror&p=fakemirror',
     }),
   ]),
 
@@ -82,7 +82,7 @@ export const View = () => [
     'Example: ',
     Link({
       text: 'De.Fragmentation',
-      to: 'https://artificialmuseum.com/#z=18.0&lat=48.20333&lng=16.35861&p=defragmentation',
+      to: 'https://artificialmuseum.com/vienna/#z=18&lat=48.2032&lng=16.3601&d=defragmentation&s=list&p=defragmentation',
     }),
   ]),
 
@@ -113,7 +113,7 @@ export const View = () => [
     'Example: ',
     Link({
       text: 'The Wound',
-      to: 'https://artificialmuseum.com/#z=18.0&lat=48.20487&lng=16.36026&p=thewound',
+      to: 'https://artificialmuseum.com/vienna/#z=18&lat=48.20487&lng=16.36026&d=thewound&p=thewound',
     }),
   ]),
 
