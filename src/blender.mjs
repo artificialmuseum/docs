@@ -17,7 +17,9 @@ export const View = () => [
       p('Platform:'),
       p('artificialmuseum.com'),
       ul([
-        li([Link({ to: 'https://discord.com/invite/kP7qZrr3' }, 'Artificial Museum Discord Server')]),
+        li([
+          Link({ to: 'https://discord.com/invite/kP7qZrr3' }, 'Artificial Museum Discord Server'),
+        ]),
         li([
           Link({ to: 'https://github.com/artificialmuseum/sandbox/' }, 'Artificial Museum Sandbox'),
         ]),
@@ -335,13 +337,17 @@ export const View = () => [
 
       p('yt: Daniel Krafft'),
       h3('Projection Painting'),
-      p('Learn projection painting in Blender 2.90. This is just a basic overview to get you started. Pixabay image:https://pixabay.com/photos/monkey-baby-barbary-mac...'),
+      p(
+        'Learn projection painting in Blender 2.90. This is just a basic overview to get you started. Pixabay image:https://pixabay.com/photos/monkey-baby-barbary-mac...',
+      ),
 
       VideoEmbed('Gh_LzoliD6A'),
 
       h3('2D Drawings to 3D Meshes (a nice hack)'),
       p('Monster Mash(drawing to mesh) + Blender 2.9 (eevee) / easy cg illustrations'),
-      p('0:00 introduction / playing around 3:40 Timelapse - Simple/Clay like Unterwater Scene 7:40 Conclusion Hey i tried this awesome tool called "Monster Mash".'),
+      p(
+        '0:00 introduction / playing around 3:40 Timelapse - Simple/Clay like Unterwater Scene 7:40 Conclusion Hey i tried this awesome tool called "Monster Mash".',
+      ),
       VideoEmbed('kUe_PXfoFTk'),
 
       p(
@@ -1390,10 +1396,7 @@ export const View = () => [
         'Character Animation with Rigify - pretty complicated',
       ),
       ul(
-        li([
-          mark({ class: 'highlight-teal_background' }, 'Rigify '),
-          '(explains awesome rigging)',
-        ]),
+        li([mark({ class: 'highlight-teal_background' }, 'Rigify '), '(explains awesome rigging)']),
       ),
       figure(
         Link(
@@ -1563,28 +1566,37 @@ export const View = () => [
       ul(li([span('export GLTF')])),
       p('How to render 360 images out of blender'),
       figure(
-        Link({ to: 'https://www.youtube.com/watch?v=w_pAVCv64gw&feature=youtu.be', class: 'bookmark source' }, [
-          div({ class: 'bookmark-info' }, [
-            div({ class: 'bookmark-text' }, [
-              div({ class: 'bookmark-title' }, 'How to Create 360 Panorama in Blender (Tutorial)'),
-              div(
-                { class: 'bookmark-description' },
-                '► Blender Interior Scene used in the video ◄https://store.chocofur.com/interior-scene-06► Learn more about 360 Panoramas ◄https://learn.chocofur.com/create-3...',
-              ),
+        Link(
+          {
+            to: 'https://www.youtube.com/watch?v=w_pAVCv64gw&feature=youtu.be',
+            class: 'bookmark source',
+          },
+          [
+            div({ class: 'bookmark-info' }, [
+              div({ class: 'bookmark-text' }, [
+                div(
+                  { class: 'bookmark-title' },
+                  'How to Create 360 Panorama in Blender (Tutorial)',
+                ),
+                div(
+                  { class: 'bookmark-description' },
+                  '► Blender Interior Scene used in the video ◄https://store.chocofur.com/interior-scene-06► Learn more about 360 Panoramas ◄https://learn.chocofur.com/create-3...',
+                ),
+              ]),
+              div({ class: 'bookmark-href' }, [
+                Img({
+                  src: 'https://www.youtube.com/s/desktop/1f1401a5/img/favicon.ico',
+                  class: 'icon bookmark-icon',
+                }),
+                'https://www.youtube.com/watch?v=w_pAVCv64gw&feature=youtu.be',
+              ]),
             ]),
-            div({ class: 'bookmark-href' }, [
-              Img({
-                src: 'https://www.youtube.com/s/desktop/1f1401a5/img/favicon.ico',
-                class: 'icon bookmark-icon',
-              }),
-              'https://www.youtube.com/watch?v=w_pAVCv64gw&feature=youtu.be',
-            ]),
-          ]),
-          Img({
-            src: 'https://i.ytimg.com/vi/w_pAVCv64gw/hqdefault.jpg',
-            class: 'bookmark-image',
-          }),
-        ]),
+            Img({
+              src: 'https://i.ytimg.com/vi/w_pAVCv64gw/hqdefault.jpg',
+              class: 'bookmark-image',
+            }),
+          ],
+        ),
       ),
       h2(
         {
