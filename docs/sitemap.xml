@@ -7,49 +7,63 @@
 
 <url>
   <loc>https:/https:/docs.artificialmuseum.com/</loc>
-  <lastmod>2023-02-06</lastmod>
+  <lastmod>2023-07-06</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.5</priority>
 </url>
 
 <url>
   <loc>https:/https:/docs.artificialmuseum.com/404/</loc>
-  <lastmod>2023-02-06</lastmod>
+  <lastmod>2023-07-06</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.5</priority>
+</url>
+
+<url>
+  <loc>https:/https:/docs.artificialmuseum.com/schema/</loc>
+  <lastmod>2023-07-06</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.5</priority>
 </url>
 
 <url>
   <loc>https:/https:/docs.artificialmuseum.com/browsers/</loc>
-  <lastmod>2023-02-06</lastmod>
+  <lastmod>2023-07-06</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.5</priority>
+</url>
+
+<url>
+  <loc>https:/https:/docs.artificialmuseum.com/glitch/</loc>
+  <lastmod>2023-07-06</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.5</priority>
 </url>
 
 <url>
   <loc>https:/https:/docs.artificialmuseum.com/gltf/</loc>
-  <lastmod>2023-02-06</lastmod>
+  <lastmod>2023-07-06</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.5</priority>
 </url>
 
 <url>
   <loc>https:/https:/docs.artificialmuseum.com/metadata/</loc>
-  <lastmod>2023-02-06</lastmod>
+  <lastmod>2023-07-06</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.5</priority>
 </url>
 
 <url>
   <loc>https:/https:/docs.artificialmuseum.com/realworld/</loc>
-  <lastmod>2023-02-06</lastmod>
+  <lastmod>2023-07-06</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.5</priority>
 </url>
 
 <url>
   <loc>https:/https:/docs.artificialmuseum.com/testing/</loc>
-  <lastmod>2023-02-06</lastmod>
+  <lastmod>2023-07-06</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.5</priority>
 </url>
