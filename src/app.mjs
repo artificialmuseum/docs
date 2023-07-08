@@ -26,10 +26,12 @@ export const build = async args => {
 
   const { artifact } = schema
 
+  const jsonString = JSON.stringify(artifact).replace(/"/gim, "'")
+
   const page = {
     name: replaceSlashSlash(`${WEB_ROOT}/schema/`),
     path: replaceSlashSlash(`${WEB_ROOT}/schema/index.html`),
-    View: () => [
+    View: state => [
       h1('Artifact Schema:'),
 
       p([
@@ -38,15 +40,17 @@ export const build = async args => {
         ' We are working on a nicer version of this page and on adding more info fields.',
       ]),
 
-      Pre({ lines: false }, JSON.stringify(artifact, null, 2)),
+      Pre({ lines: false }, JSON.stringify(state.artifact, null, 2)),
     ],
     state: {
       title: 'Artifact Schema',
       description: 'Artificial Museum Artifact Schema Documentation',
+      artifact,
     },
     originalState: {
       title: 'Artifact Schema',
       description: 'Artificial Museum Artifact Schema Documentation',
+      artifact,
     },
   }
 
